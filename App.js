@@ -10,7 +10,7 @@ export default class FooterTabsIconTextExample extends Component {
 
   constructor(props) {
     super(props)
-    
+
   }
 
   getMoviesFromApiAsync() {
