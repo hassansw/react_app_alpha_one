@@ -8,19 +8,19 @@ import { Container, Header, Content, Footer, FooterTab, Button, Icon, Text, View
 
 export default class FooterTabsIconTextExample extends Component {
 
-  constructor() {
-    super()
+  constructor(props) {
+    super(props)
+    
   }
 
   getMoviesFromApiAsync() {
     return fetch('http://facebook.github.io/react-native/movies.json')
       .then((response) => response.json()) //converts the retruned object into json
       .then((responseJson) => {
-        responseJson.movies.forEach(movie => {
-            console.log(movie)
-        });
-        console.log(responseJson)
-        return responseJson;
+        // responseJson.movies.forEach(movie => {
+        //     console.log(movie)
+        // });
+        //return responseJson;
       })
       .catch((error) => {
         console.error(error);
@@ -32,6 +32,7 @@ export default class FooterTabsIconTextExample extends Component {
       <Container>
         <Header />
         <Content>
+
         </Content>
         <Footer>
           <FooterTab>
