@@ -1,5 +1,3 @@
-'use-strict';
-
 import React, { Component } from 'react';
 import {Fetch} from 'react-native';
 import { Container, Header, Content, Footer, FooterTab, Button, Icon, Text, View } from 'native-base';
@@ -7,11 +5,6 @@ import { Container, Header, Content, Footer, FooterTab, Button, Icon, Text, View
 
 
 export default class FooterTabsIconTextExample extends Component {
-
-  constructor(props) {
-    super(props)
-
-  }
 
   getMoviesFromApiAsync() {
     return fetch('http://facebook.github.io/react-native/movies.json')
