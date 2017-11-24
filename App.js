@@ -6,13 +6,17 @@ import { Container, Header, Content, Footer, FooterTab, Button, Icon, Text, View
 
 export default class FooterTabsIconTextExample extends Component {
 
+  constructor(props) {
+    super(props)
+  }
+
   getMoviesFromApiAsync() {
     return fetch('http://facebook.github.io/react-native/movies.json')
-      .then((response) => response.json()) //converts the retruned object into json
+      .then((response) => response.json()) //this converts the retruned object into json
       .then((responseJson) => {
-        // responseJson.movies.forEach(movie => {
-        //     console.log(movie)
-        // });
+        responseJson.movies.forEach(movie => {
+            console.log(movie)
+        });
         //return responseJson;
       })
       .catch((error) => {
